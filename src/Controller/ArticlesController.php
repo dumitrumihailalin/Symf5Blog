@@ -48,7 +48,7 @@ class ArticlesController extends AbstractController
         ]);
     }
     /**
-     * This route has a greedy pattern and is defined first.
+     * This route has a greedy pattern and is defined first. small update
      *
      * @Route("/filter", name="filter")
      */
