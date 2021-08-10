@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ArticlesController!{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <h1>Latest News</h1>
+    <div class="row">
+        <div class="col-md-12 bg-info p-3 article">
+            <small>{{ article.getDateTime() | format_datetime() }} <span class="category">politica</span></small>
+            <h1>{{ article.title }}</h1>
+            <p>{{ article.content }}</p>
+            <small>{{ article.relation.email }}</small>
+            <a href="/article/{{ article.slug }}">Read article</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
