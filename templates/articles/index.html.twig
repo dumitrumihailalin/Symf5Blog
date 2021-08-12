@@ -9,7 +9,7 @@
     <div class="row">
         {% for article in articles %}
             <div class="col-md-3 bg-info p-3 article">
-                <small>{{ article.getDateTime() | format_datetime() }} <span class="category">politica</span></small>
+                <small>{{ article.getDateTime() | format_datetime() }} <button class="btn btn-outline-light pull-right">politiica</button></small>
                 <h1>{{ article.title }}</h1>
                 <p>{{ article.content }}</p>
                 <small>{{ article.relation.email }}</small>
