@@ -6,6 +6,12 @@
 
 <div class="container">
     <h1>Create new article</h1>
-    {{ form(form) }}
+    {{ form_start(form) }}
+    <label>Title</label>
+        {{ form_widget(form.title, {label_attr: {class: 'form-control'} }) }}
+    <label>Content</label>
+        {{ form_widget(form.content, {label_attr: {class: 'form-control'} }) }}
+    <button type="submit" class="btn btn-info mt-3">Save</button>
+    {{ form_end(form) }}
 </div>
 {% endblock %}

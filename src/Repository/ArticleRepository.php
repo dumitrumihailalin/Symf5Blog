@@ -58,7 +58,8 @@ class ArticleRepository extends ServiceEntityRepository
         $query = $entityManager->createQuery(
             'SELECT a, u
             FROM App\Entity\Article a
-            INNER JOIN a.relation u
+            INNER JOIN a.relation u 
+            ORDER BY a.id DESC
         ');
 
         return $query->getResult();

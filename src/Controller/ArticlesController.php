@@ -76,7 +76,6 @@ class ArticlesController extends AbstractController
         $form = $this->createFormBuilder($article)
             ->add('title', TextType::class, ['label'=>'Title'])
             ->add('content', TextareaType::class, ['label'=>'Content'])
-            ->add('save', SubmitType::class, ['label'=>'Save'])
             ->getForm();
 
         $form->handleRequest($request);
